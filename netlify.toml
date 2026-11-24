@@ -1,0 +1,17 @@
+# EchElon Stones — Netlify settings
+[build]
+  publish = "site"
+  functions = "netlify/functions"
+  command = "echo 'Static site, nothing to build'"
+
+[functions]
+  node_bundler = "esbuild"
+
+# Keep the admin page out of search engines and caches.
+[[headers]]
+  for = "/admin-reviews.html"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+    Cache-Control = "no-store"
+    Referrer-Policy = "no-referrer"
+    X-Frame-Options = "DENY"

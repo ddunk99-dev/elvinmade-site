@@ -1,0 +1,15 @@
+{
+  "name": "elvinmade-site",
+  "private": true,
+  "type": "module",
+  "description": "EchElon Stones site with reviews (Netlify Functions + Netlify Blobs)",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^11.1.11"
+  },
+  "scripts": {
+    "test": "node tests/backend.test.mjs"
+  }
+}

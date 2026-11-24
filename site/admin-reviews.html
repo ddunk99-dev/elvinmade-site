@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#141114">
+<title>Reviews admin — EchElon Stones</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--ink:#f1e9dc;--ink-soft:#b2a899;--line:#352f35;--line2:#272227;--paper:#141114;--cream:#1b171b;--gold:#c9a45c;--gold-lt:#e2c68c;--on-gold:#141114;--bad:#e8a091}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:var(--paper);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+input,select,textarea{font:inherit;color:var(--ink);background:var(--paper);border:1px solid var(--line);padding:11px 13px;width:100%;outline:none}
+input:focus,select:focus{border-color:var(--gold)}
+:focus-visible{outline:2px solid var(--gold-lt);outline-offset:2px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 clamp(16px,4vw,40px)}
+header{border-bottom:1px solid var(--line);padding:18px 0}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{font-family:'Cormorant Garamond',serif;font-size:1.45rem;color:var(--gold)}
+.brand small{font-family:'Inter',sans-serif;font-size:.8rem;color:var(--ink-soft);margin-left:10px}
+.link{color:var(--gold-lt);border-bottom:1px solid var(--gold);font-size:.84rem}
+h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(2rem,4vw,2.8rem);line-height:1.1;margin:40px 0 8px}
+.lede{color:var(--ink-soft);font-weight:300;margin-bottom:28px;max-width:60ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:10px 18px;border-radius:40px;font-size:.82rem;font-weight:500;border:1px solid var(--line);transition:background .2s,border-color .2s,color .2s}
+.btn:hover{border-color:var(--gold);color:var(--gold-lt)}
+.btn.gold{background:var(--gold);border-color:var(--gold);color:var(--on-gold)}.btn.gold:hover{background:var(--gold-lt);color:var(--on-gold)}
+.btn.warn{color:var(--bad)}.btn.warn.arm{background:#5a2a24;border-color:var(--bad);color:#fff}
+.btn:disabled{opacity:.5;cursor:default}
+.login{max-width:420px;margin:12vh auto 0;border:1px solid var(--line);background:var(--cream);padding:34px}
+.login h1{margin-top:0}
+.login label{display:block;font-size:.8rem;color:var(--ink-soft);margin:16px 0 6px}
+.login .btn{margin-top:16px;width:100%;padding:13px}
+.msg{color:var(--bad);font-size:.86rem;margin-top:12px;min-height:1.3em}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;border-bottom:1px solid var(--line);margin-bottom:8px}
+.tabs button{padding:12px 16px;font-size:.9rem;color:var(--ink-soft);border-bottom:2px solid transparent;margin-bottom:-1px}
+.tabs button[aria-selected="true"]{color:var(--ink);border-color:var(--gold)}
+.tabs .n{display:inline-block;min-width:1.6em;margin-left:6px;padding:0 6px;border-radius:20px;background:var(--line);font-size:.74rem;text-align:center}
+.tabs button[data-t="pending"] .n.has{background:var(--gold);color:var(--on-gold)}
+.item{padding:24px 0;border-bottom:1px solid var(--line)}
+.top{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:.82rem;color:var(--ink-soft)}
+.stones{color:var(--gold);letter-spacing:2px;font-size:.9rem}
+.tag{display:inline-block;border:1px solid var(--line);border-radius:20px;padding:2px 10px;font-size:.74rem}
+.tag.ver{border-color:var(--gold);color:var(--gold-lt)}
+.tag.flag{border-color:var(--bad);color:var(--bad)}
+.item h3{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:1.35rem;margin-top:10px}
+.item .bd{color:#d6cdbf;font-weight:300;margin-top:6px;white-space:pre-line;overflow-wrap:anywhere;max-width:70ch}
+.meta{margin-top:12px;font-size:.82rem;color:var(--ink-soft);display:flex;gap:6px 18px;flex-wrap:wrap}
+.meta b{color:var(--ink);font-weight:500}
+.meta a{color:var(--gold-lt)}
+.acts{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.empty{padding:48px 0;color:var(--ink-soft);font-weight:300}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:18px 0 6px}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:40px;padding:3px}
+.seg button{padding:7px 14px;border-radius:40px;font-size:.8rem;color:var(--ink-soft)}
+.seg button[aria-pressed="true"]{background:var(--gold);color:var(--on-gold)}
+.order .top b{color:var(--ink);font-size:1rem;font-weight:500;letter-spacing:.02em}
+.st-ok{color:var(--gold-lt)}.st-wait{color:var(--ink-soft)}
+.copy{display:flex;gap:8px;margin-top:10px}
+.copy input{font-size:.8rem;padding:8px 10px}
+.add{border:1px solid var(--line);background:var(--cream);padding:24px;margin:22px 0}
+.add h2{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:1.5rem}
+.add p{color:var(--ink-soft);font-size:.86rem;font-weight:300;margin:4px 0 16px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.add label{display:block;font-size:.78rem;color:var(--ink-soft);margin-bottom:6px}
+.add select[multiple]{height:180px}
+.add .btn{margin-top:14px}
+@media(max-width:640px){.grid2{grid-template-columns:1fr}}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(120px);background:var(--ink);color:var(--paper);padding:12px 22px;font-size:.84rem;transition:transform .35s;z-index:9}
+.toast.show{transform:translateX(-50%)}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<header><div class="wrap"><span class="brand">EchElon Stones<small>Reviews admin</small></span>
+  <span><a class="link" href="/#reviews">View site</a> <button class="link" id="out" hidden onclick="signOut()" style="margin-left:16px">Sign out</button></span></div></header>
+
+<main class="wrap">
+  <section class="login" id="login">
+    <h1>Sign in</h1>
+    <p class="lede" style="margin:0">Use the admin password set in Netlify.</p>
+    <form onsubmit="signIn(event)">
+      <label for="pw">Admin password</label><input id="pw" type="password" autocomplete="current-password" required>
+      <button class="btn gold" type="submit">Sign in</button>
+      <p class="msg" id="loginMsg" role="alert"></p>
+    </form>
+  </section>
+
+  <section id="app" hidden>
+    <h1>Reviews</h1>
+    <p class="lede">Approve what should be public, hide anything that shouldn’t be. Hidden reviews can be brought back. Deleting is permanent.</p>
+    <div class="tabs" role="tablist">
+      <button role="tab" data-t="pending" onclick="tab('pending')">Waiting<span class="n" id="nPending">0</span></button>
+      <button role="tab" data-t="approved" onclick="tab('approved')">Live<span class="n" id="nApproved">0</span></button>
+      <button role="tab" data-t="hidden" onclick="tab('hidden')">Hidden<span class="n" id="nHidden">0</span></button>
+      <button role="tab" data-t="orders" onclick="tab('orders')">Orders<span class="n" id="nOrders">0</span></button>
+    </div>
+    <div id="view"></div>
+  </section>
+</main>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fmt=iso=>iso?new Date(iso).toLocaleString('en-US',{month:'short',day:'numeric',year:'numeric',hour:'numeric',minute:'2-digit'}):'';
+const FLAG={link:'Contains a link',html:'Contains code','shouting':'Mostly capitals','repeated-chars':'Repeated characters','spam-words':'Spam words'};
+let PW=sessionStorage.getItem('esAdmin')||'',S={tab:'pending',reviews:[],orders:[],linksEnabled:false,products:[],ofilter:'requested'};
+let tt;function toast(m){$('toast').textContent=m;$('toast').classList.add('show');clearTimeout(tt);tt=setTimeout(()=>$('toast').classList.remove('show'),2600);}
+
+async function api(method,qs,body){
+  const r=await fetch('/api/admin'+(qs||''),{method,headers:{Authorization:'Bearer '+PW,'Content-Type':'application/json',Accept:'application/json'},body:body?JSON.stringify(body):undefined});
+  const d=await r.json().catch(()=>({ok:false,message:'The server did not answer. Is the site deployed with functions?'}));
+  if(r.status===401||r.status===429){if(r.status===401){PW='';sessionStorage.removeItem('esAdmin');}showLogin(d.message);throw d;}
+  if(!d.ok)throw d;return d;}
+
+function showLogin(m){$('login').hidden=false;$('app').hidden=true;$('out').hidden=true;$('loginMsg').textContent=m||'';}
+async function signIn(e){e.preventDefault();PW=$('pw').value;
+  try{await load();sessionStorage.setItem('esAdmin',PW);$('pw').value='';}catch(x){$('loginMsg').textContent=x.message||'Could not sign in.';}}
+function signOut(){PW='';sessionStorage.removeItem('esAdmin');showLogin();}
+
+async function load(){
+  const [rv,od]=await Promise.all([api('GET','?view=reviews'),api('GET','?view=orders')]);
+  S.reviews=rv.reviews;S.orders=od.orders;S.linksEnabled=od.linksEnabled;
+  $('login').hidden=true;$('app').hidden=false;$('out').hidden=false;render();}
+async function loadProducts(){
+  try{const h=await (await fetch('/index.html',{cache:'no-store'})).text();const m=h.match(/const PRODUCTS=(\[.*?\]);\n/s);
+    S.products=m?JSON.parse(m[1]).filter(p=>p.kind!=='giftset').sort((a,b)=>a.name.localeCompare(b.name)):[];}catch(e){S.products=[];}}
+
+function counts(){const c=s=>S.reviews.filter(r=>r.status===s).length;
+  $('nPending').textContent=c('pending');$('nPending').classList.toggle('has',c('pending')>0);
+  $('nApproved').textContent=c('approved');$('nHidden').textContent=c('hidden');
+  $('nOrders').textContent=S.orders.filter(o=>o.status!=='confirmed').length;}
+function tab(t){S.tab=t;render();}
+function render(){counts();
+  document.querySelectorAll('.tabs button').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.t===S.tab)));
+  if(S.tab==='orders')return renderOrders();
+  const list=S.reviews.filter(r=>r.status===S.tab);
+  const words={pending:'Nothing waiting. New reviews from visitors land here first.',approved:'No live reviews yet.',hidden:'Nothing hidden.'};
+  $('view').innerHTML=list.length?list.map(rvHTML).join(''):`<p class="empty">${words[S.tab]}</p>`;}
+function rvHTML(r){
+  const acts=[];
+  if(r.status!=='approved')acts.push(`<button class="btn gold" onclick="setStatus('${r.id}','approved',this)">Approve</button>`);
+  if(r.status!=='hidden')acts.push(`<button class="btn" onclick="setStatus('${r.id}','hidden',this)">Hide</button>`);
+  if(r.status==='hidden')acts.push(`<button class="btn" onclick="setStatus('${r.id}','pending',this)">Move to waiting</button>`);
+  acts.push(`<button class="btn warn" onclick="delReview('${r.id}',this)">Delete</button>`);
+  return `<article class="item"><div class="top"><span class="stones" aria-label="${r.rating} out of 5">${'◆'.repeat(r.rating)}<span style="opacity:.25">${'◆'.repeat(5-r.rating)}</span></span>
+    ${r.verified?`<span class="tag ver">Verified Purchase, ${esc(r.orderRef)}</span>`:'<span class="tag">Visitor</span>'}
+    ${(r.flags||[]).map(f=>`<span class="tag flag">${esc(FLAG[f]||f)}</span>`).join('')}<span>${fmt(r.createdAt)}</span></div>
+    ${r.title?`<h3>${esc(r.title)}</h3>`:''}<p class="bd">${esc(r.body)}</p>
+    <div class="meta"><span>By <b>${esc(r.name)}</b></span>${r.email?`<a href="mailto:${esc(r.email)}">${esc(r.email)}</a>`:'<span>No email given</span>'}<span>Piece: ${esc(r.productName||'The shop overall')}</span></div>
+    <div class="acts">${acts.join('')}</div></article>`;}
+async function setStatus(id,status,btn){btn.disabled=true;
+  try{const d=await api('POST','',{action:'setStatus',id,status});S.reviews=S.reviews.map(r=>r.id===id?d.review:r);
+    toast(status==='approved'?'Approved. It’s live on the site.':status==='hidden'?'Hidden from the site.':'Moved to waiting.');render();}
+  catch(x){btn.disabled=false;toast(x.message||'That didn’t work.');}}
+function armed(btn,label){if(btn.classList.contains('arm'))return true;btn.classList.add('arm');const o=btn.textContent;btn.textContent=label;
+  setTimeout(()=>{btn.classList.remove('arm');btn.textContent=o;},3500);return false;}
+async function delReview(id,btn){if(!armed(btn,'Click again to delete'))return;btn.disabled=true;
+  try{await api('POST','',{action:'deleteReview',id});S.reviews=S.reviews.filter(r=>r.id!==id);toast('Deleted.');render();}
+  catch(x){btn.disabled=false;toast(x.message||'That didn’t work.');}}
+
+/* orders */
+function renderOrders(){
+  const list=S.orders.filter(o=>S.ofilter==='all'||o.status===S.ofilter);
+  $('view').innerHTML=`<div class="bar"><div class="seg" role="group" aria-label="Filter orders">
+      ${[['requested','Waiting for deposit'],['confirmed','Confirmed'],['all','All']].map(([k,l])=>`<button aria-pressed="${S.ofilter===k}" onclick="S.ofilter='${k}';renderOrders()">${l}</button>`).join('')}</div>
+      <button class="btn" onclick="toggleAdd()">Add a past order</button></div>
+    ${S.linksEnabled?'':'<p class="lede" style="margin:12px 0">To send customers personal review links, add REVIEW_LINK_SECRET in Netlify. Until then, customers verify with their order reference and email.</p>'}
+    <form class="add" id="addForm" hidden onsubmit="addOrder(event)"><h2>Add a past order</h2>
+      <p>For orders placed before reviews existed, or by text or in person. It’s saved as confirmed so the customer can leave a Verified Purchase review.</p>
+      <div class="grid2"><div><label for="aName">Customer name</label><input id="aName" required maxlength="80"></div>
+        <div><label for="aEmail">Customer email</label><input id="aEmail" type="email" required maxlength="120"></div></div>
+      <div style="margin-top:12px"><label for="aItems">Pieces (hold Ctrl or Cmd to pick more than one)</label>
+        <select id="aItems" multiple required><option value="0">Custom design</option>${S.products.map(p=>`<option value="${p.id}">${esc(p.name)}</option>`).join('')}</select></div>
+      <button class="btn gold" type="submit">Save order</button></form>
+    ${list.length?list.map(oHTML).join(''):'<p class="empty">No orders here.</p>'}`;}
+function oHTML(o){const ok=o.status==='confirmed';
+  return `<article class="item order"><div class="top"><b>${esc(o.ref)}</b><span class="${ok?'st-ok':'st-wait'}">${ok?'Confirmed':'Waiting for deposit'}</span><span>${fmt(o.createdAt)}</span>${o.source==='admin'?'<span class="tag">Added by hand</span>':''}</div>
+    <div class="meta"><span><b>${esc(o.name)}</b></span><a href="mailto:${esc(o.email)}">${esc(o.email)}</a><span>${o.items.map(i=>esc(i.name)+(i.qty>1?' ×'+i.qty:'')).join(', ')}</span></div>
+    <div class="acts">${ok?`<button class="btn" onclick="setOrder('${o.ref}','unconfirmOrder',this)">Undo confirmation</button>${S.linksEnabled?`<button class="btn gold" onclick="getLink('${o.ref}',this)">Copy review link</button>`:''}`
+      :`<button class="btn gold" onclick="setOrder('${o.ref}','confirmOrder',this)">Deposit received</button>`}
+      <button class="btn warn" onclick="delOrder('${o.ref}',this)">Delete</button></div><div id="lk-${o.ref}"></div></article>`;}
+async function setOrder(ref,action,btn){btn.disabled=true;
+  try{const d=await api('POST','',{action,ref});S.orders=S.orders.map(o=>o.ref===ref?d.order:o);
+    toast(action==='confirmOrder'?`${ref} confirmed. The customer can now leave a Verified Purchase review.`:'Confirmation removed.');renderOrders();counts();}
+  catch(x){btn.disabled=false;toast(x.message||'That didn’t work.');}}
+async function getLink(ref,btn){btn.disabled=true;
+  try{const d=await api('POST','',{action:'reviewLink',ref});
+    $('lk-'+ref).innerHTML=`<div class="copy"><input readonly value="${esc(d.url)}" aria-label="Review link for ${esc(ref)}"><button class="btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.value).then(()=>toast('Copied'))">Copy</button></div>`;
+    try{await navigator.clipboard.writeText(d.url);toast('Review link copied. Paste it into your email to the customer.');}catch(e){toast('Link ready below.');}}
+  catch(x){toast(x.message||'That didn’t work.');}btn.disabled=false;}
+async function delOrder(ref,btn){if(!armed(btn,'Click again to delete'))return;btn.disabled=true;
+  try{await api('POST','',{action:'deleteOrder',ref});S.orders=S.orders.filter(o=>o.ref!==ref);toast('Order deleted.');renderOrders();counts();}
+  catch(x){btn.disabled=false;toast(x.message||'That didn’t work.');}}
+function toggleAdd(){const f=$('addForm');f.hidden=!f.hidden;if(!f.hidden)$('aName').focus();}
+async function addOrder(e){e.preventDefault();const btn=e.target.querySelector('button[type=submit]');btn.disabled=true;
+  const items=[...$('aItems').selectedOptions].map(o=>({id:+o.value,name:o.textContent}));
+  try{const d=await api('POST','',{action:'addOrder',name:$('aName').value,email:$('aEmail').value,items});
+    S.orders.unshift(d.order);S.ofilter='confirmed';toast(`Saved as ${d.order.ref}.`);renderOrders();counts();}
+  catch(x){btn.disabled=false;toast(x.message||'That didn’t work.');}}
+
+loadProducts();
+if(PW)load().catch(()=>{});else showLogin();
+</script>
+</body>
+</html>
